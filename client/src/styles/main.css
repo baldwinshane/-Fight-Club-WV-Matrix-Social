@@ -1,0 +1,89 @@
+/* main.css: Base styles using Tailwind CSS for the Fight Club WV Matrix Social platform */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #111827; /* Tailwind gray-900 */
+  color: #ffffff; /* White text for contrast */
+  line-height: 1.5;
+}
+
+/* Global button styles */
+button {
+  @apply transition duration-200 ease-in-out;
+}
+
+/* Input styles */
+input, textarea {
+  @apply bg-gray-700 text-white border-none rounded focus:outline-none focus:ring-2 focus:ring-red-600;
+}
+
+/* Link styles */
+a {
+  @apply text-red-400 hover:text-red-500 transition duration-200;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-red-600 rounded-full hover:bg-red-700;
+}
+
+/* Container for centered layouts */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Responsive typography */
+h1 {
+  @apply text-3xl sm:text-4xl font-bold;
+}
+
+h2 {
+  @apply text-2xl sm:text-3xl font-bold;
+}
+
+h3 {
+  @apply text-xl sm:text-2xl font-bold;
+}
+
+p {
+  @apply text-base sm:text-lg;
+}
+
+/* Custom utility classes */
+.shadow-fc {
+  @apply shadow-lg shadow-red-900/50;
+}
+
+.border-fc {
+  @apply border border-gray-700;
+}
+
+.bg-fc-dark {
+  @apply bg-gray-800;
+}
+
+.text-fc-accent {
+  @apply text-red-600;
+}
+
+.hover\:text-fc-accent:hover {
+  @apply text-red-700;
+}

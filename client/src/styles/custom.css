@@ -1,0 +1,150 @@
+/* custom.css: Fight Club WV-specific styles for branding and effects */
+
+/* Fight Club branding container */
+.fc-container {
+  background: linear-gradient(180deg, #1f2937 0%, #111827 100%); /* Gradient from gray-800 to gray-900 */
+  border: 1px solid #991b1b; /* Red-900 border for Fight Club vibe */
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.fc-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #dc2626; /* Red-600 accent */
+  opacity: 0.8;
+}
+
+/* Chat room specific styles */
+.chat-room {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.chat-room .message {
+  background: #374151; /* Gray-700 */
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.chat-room .message:hover {
+  transform: scale(1.02);
+}
+
+/* Notification panel styles */
+.notification-panel {
+  background: #1f2937; /* Gray-800 */
+  border-left: 2px solid #991b1b; /* Red-900 */
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.notification-item {
+  background: #374151; /* Gray-700 */
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid #dc2626; /* Red-600 */
+  transition: background 0.2s ease-in-out;
+}
+
+.notification-item:hover {
+  background: #4b5563; /* Gray-600 */
+}
+
+/* User profile card */
+.profile-card {
+  background: #1f2937; /* Gray-800 */
+  border: 1px solid #991b1b; /* Red-900 */
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(153, 27, 27, 0.2); /* Red-900 shadow */
+}
+
+.profile-card img {
+  border: 2px solid #dc2626; /* Red-600 */
+  border-radius: 50%;
+}
+
+/* Message input styles */
+.message-input {
+  background: #111827; /* Gray-900 */
+  border-top: 1px solid #4b5563; /* Gray-600 */
+  padding: 1rem;
+}
+
+.message-input input {
+  background: #374151; /* Gray-700 */
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  flex: 1;
+}
+
+/* Button animations */
+.fc-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.fc-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.fc-button:hover::after {
+  width: 200%;
+  height: 200%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .fc-container {
+    padding: 1rem;
+  }
+
+  .chat-room .message {
+    padding: 0.5rem;
+  }
+
+  .notification-panel {
+    padding: 0.5rem;
+  }
+
+  .profile-card {
+    padding: 1rem;
+  }
+}
+
+/* Accessibility enhancements */
+:focus-visible {
+  outline: 2px solid #dc2626; /* Red-600 */
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
